@@ -1,0 +1,33 @@
+{
+  "name": "proudcommerce/similarproducts",
+  "version": "1.0.0",
+  "description": "Better logic for displaying similar products.",
+  "type": "oxideshop-module",
+  "license": [
+    "GNU"
+  ],
+  "authors": [
+    {
+      "name": "ProudCommerce",
+      "homepage": "https://www.proudcommerce.com/",
+      "email": "welcome@proudcommerce.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@proudcommerce.com"
+  },
+  "require": {
+    "php": ">= 5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProudCommerce\\SimilarProducts\\": "../../../source/modules/pc/similarproducts"
+    }
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "pc/similarproducts"
+    }
+  }
+}
