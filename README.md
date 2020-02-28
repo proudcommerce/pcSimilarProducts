@@ -10,9 +10,15 @@ Installation
 	composer require proudcommerce/similarproducts
 
 
+Configuration
+- Specify up to 3 attributes in module settings
+- Attribute 1 is required, attribute 2 and 3 not mandatory
+- Similar products are matched by this attributes (AND operator)
+
+
 Changelog
 - 2020-02-28    |   1.0.0    |   module release for oxid 6.x
-	
+
 	
 License
 
