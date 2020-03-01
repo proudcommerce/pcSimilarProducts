@@ -17,7 +17,8 @@ Configuration
 
 
 Changelog
-- 2020-02-28    |   1.0.0    |   module release for oxid 6.x
+- 2020-03-01	|	1.0.1	|	fix	if attribute value is empty
+- 2020-02-28    |   1.0.0	|	module release for oxid 6.x
 
 	
 License

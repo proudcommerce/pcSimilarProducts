@@ -1,6 +1,6 @@
 {
   "name": "proudcommerce/similarproducts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Better logic for displaying similar products.",
   "type": "oxideshop-module",
   "license": [

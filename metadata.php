@@ -44,7 +44,7 @@ $aModule = [
         'en' => 'Better logic for displaying similar products.',
     ],
     'thumbnail'   => '',
-    'version'     => '1.0.0',
+    'version'     => '1.0.1',
     'author'      => 'ProudCommerce',
     'url'         => 'https://www.proudcommerce.com',
     'email'       => 'module@proudcommerce.com',

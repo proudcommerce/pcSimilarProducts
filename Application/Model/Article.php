@@ -33,8 +33,9 @@ class Article extends Article_parent
         $sFieldList = $this->getSelectFields();
 
         // ProudCommerce
-        if (!empty(Registry::getConfig()->getConfigParam('pcsimilarproducts_attr1'))) {
-            $aList = $this->getPcSimilarProducts();
+        $simProducts = $this->getPcSimilarProducts();
+        if (!empty($simProducts)) {
+            $aList = $simProducts;
         } else {
             $aList = array_slice($aList, 0, $this->getConfig()->getConfigParam('iNrofSimilarArticles'));
         }
@@ -60,15 +61,15 @@ class Article extends Article_parent
 
         $attributes = $this->getPcArticleAttributes();
 
-        if ($attribute1 = Registry::getConfig()->getConfigParam('pcsimilarproducts_attr1')) {
+        if (($attribute1 = Registry::getConfig()->getConfigParam('pcsimilarproducts_attr1')) && !empty($attributes[$attribute1])) {
             $sSelect = 'select oxobjectid from oxobject2attribute where (oxattrid = "' . $attribute1 . '" and oxvalue = "' . $attributes[$attribute1] . '")';
             $articles = $oDb->getCol($sSelect);
         }
-        if ($attribute2 = Registry::getConfig()->getConfigParam('pcsimilarproducts_attr2')) {
+        if (($attribute2 = Registry::getConfig()->getConfigParam('pcsimilarproducts_attr1')) && !empty($attributes[$attribute2])) {
             $sSelect = 'select oxobjectid from oxobject2attribute where oxattrid = "' . $attribute2 . '" and oxvalue = "' . $attributes[$attribute2] . '" and oxobjectid in ("' . implode('", "', $articles) . '")';
             $articles = $oDb->getCol($sSelect);
         }
-        if ($attribute3 = Registry::getConfig()->getConfigParam('pcsimilarproducts_attr3')) {
+        if (($attribute3 = Registry::getConfig()->getConfigParam('pcsimilarproducts_attr1')) && !empty($attributes[$attribute3])) {
             $sSelect = 'select oxobjectid from oxobject2attribute where oxattrid = "' . $attribute3 . '" and oxvalue = "' . $attributes[$attribute3] . '" and oxobjectid in ("' . implode('", "', $articles) . '")';
             $articles = $oDb->getCol($sSelect);
         }
